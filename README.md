@@ -69,11 +69,6 @@ Keluar dari container untuk kembali ke host machine sebelum menjalankan perintah
 docker logs nginx-container
 ```
 
-### Menghapus Docker Image
-```bash
-docker rmi nginx:latest
-```
-
 ## Stop & Remove Container (Setelah Eksperimen)
 
 ### Stop Container
