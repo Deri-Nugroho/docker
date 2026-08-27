@@ -13,17 +13,17 @@ sudo apt install git
 
 ## Perintah Dasar Docker
 
-### 1. Image - Melihat Docker Images
-```bash
-docker images
-```
-Menampilkan semua Docker images yang sudah ter-download di sistem.
-
-### 2. Pull - Mengunduh Docker Image
+### 1. Pull - Mengunduh Docker Image
 ```bash
 docker pull nginx:latest
 ```
 Mengunduh image Nginx versi terbaru dari Docker Hub.
+
+### 2. Image - Melihat Docker Images
+```bash
+docker images
+```
+Menampilkan semua Docker images yang sudah ter-download di sistem.
 
 ### 3. Run - Menjalankan Container
 ```bash
@@ -35,17 +35,10 @@ Menjalankan container Nginx dengan konfigurasi:
 - `--name nginx-container`: Memberi nama container
 - `nginx:latest`: Image yang digunakan
 
-### 4. Stop - Menghentikan Container
-```bash
-docker stop nginx-container
-```
-Menghentikan container yang sedang berjalan.
-
-### 5. Remove - Menghapus Container
-```bash
-docker rm nginx-container
-```
-Menghapus container yang sudah berhenti.
+### 4. Akses Aplikasi
+Buka browser dan akses:
+- Localhost: http://localhost
+- IP Server: http://[your-server-ip]
 
 ## Perintah Tambahan (Ekperimen dulu sebelum Stop & Remove)
 
@@ -117,14 +110,19 @@ cd ~/docker-project
 docker-compose up -d
 ```
 
-### Menghentikan dengan Docker Compose
-```bash
-docker-compose down
-```
-
 ### Melihat Status Container
 ```bash
 docker-compose ps
+```
+
+### Akses Aplikasi
+Buka browser dan akses:
+- Localhost: http://localhost
+- IP Server: http://[your-server-ip]
+
+### Menghentikan dengan Docker Compose
+```bash
+docker-compose down
 ```
 
 ## Struktur Project
@@ -137,9 +135,3 @@ docker/
 └── html/
     └── index.html
 ```
-
-## Akses Aplikasi
-
-Setelah container berjalan, akses aplikasi di:
-- Localhost: http://localhost
-- IP Server: http://[your-server-ip]
