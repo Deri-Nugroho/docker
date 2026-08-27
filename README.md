@@ -6,6 +6,7 @@
 sudo apt update
 sudo apt install docker.io
 sudo usermod -aG docker $USER
+sudo apt install docker-compose
 # Reboot setelah perintah di atas
 ```
 
@@ -45,7 +46,7 @@ docker rm nginx-container
 ```
 Menghapus container yang sudah berhenti.
 
-## Perintah Tambahan
+## Perintah Tambahan (Ekperimen dulu sebelum Stop & Remove)
 
 ### Melihat Container yang Berjalan
 ```bash
@@ -57,11 +58,6 @@ docker ps
 docker ps -a
 ```
 
-### Menghapus Docker Image
-```bash
-docker rmi nginx:latest
-```
-
 ### Masuk ke Container (Interactive Mode)
 ```bash
 docker exec -it nginx-container /bin/bash
@@ -70,6 +66,28 @@ docker exec -it nginx-container /bin/bash
 ### Melihat Log Container
 ```bash
 docker logs nginx-container
+```
+
+### Menghapus Docker Image
+```bash
+docker rmi nginx:latest
+```
+
+## Stop & Remove Container (Setelah Eksperimen)
+
+### Stop Container
+```bash
+docker stop nginx-container
+```
+
+### Remove Container
+```bash
+docker rm nginx-container
+```
+
+### Remove Image (Opsional)
+```bash
+docker rmi nginx:latest
 ```
 
 ## Menggunakan Docker Compose
