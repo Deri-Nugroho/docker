@@ -7,6 +7,7 @@ sudo apt update
 sudo apt install docker.io
 sudo usermod -aG docker $USER
 sudo apt install docker-compose
+sudo apt install git
 # Reboot setelah perintah di atas
 ```
 
@@ -101,11 +102,14 @@ docker rmi nginx:latest
 
 **PENTING:** Pastikan Anda berada di direktori project yang berisi file `docker-compose.yml`
 
+### Clone Repository dari GitHub
+```bash
+git clone https://github.com/Deri-Nugroho/docker ~/docker-project
+```
+
 ### Navigasi ke Direktori Project
 ```bash
 cd ~/docker-project
-# atau
-cd /path/to/docker-project
 ```
 
 ### Menjalankan dengan Docker Compose
