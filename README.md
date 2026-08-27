@@ -92,6 +92,15 @@ docker rmi nginx:latest
 
 ## Menggunakan Docker Compose
 
+**PENTING:** Pastikan Anda berada di direktori project yang berisi file `docker-compose.yml`
+
+### Navigasi ke Direktori Project
+```bash
+cd ~/docker-project
+# atau
+cd /path/to/docker-project
+```
+
 ### Menjalankan dengan Docker Compose
 ```bash
 docker-compose up -d
