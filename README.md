@@ -62,6 +62,13 @@ docker ps -a
 ```bash
 docker exec -it nginx-container /bin/bash
 ```
+**CATATAN:** Setelah masuk ke container, Anda TIDAK bisa menjalankan perintah Docker (docker, docker-compose) karena Docker hanya ada di host machine, bukan di dalam container.
+
+### Keluar dari Container
+```bash
+exit
+```
+Keluar dari container untuk kembali ke host machine sebelum menjalankan perintah Docker lainnya.
 
 ### Melihat Log Container
 ```bash
